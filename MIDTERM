@@ -1,0 +1,75 @@
+WEEKDAYS.JAVA 
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package days;
+
+/**
+ *
+ * @author sivagamasrinivasan
+ */
+
+
+
+
+public enum Weekdays {
+    MONDAY("Monday"),
+    TUESDAY("Tuesday"),
+    WEDNESDAY("Wednesday"),
+    THURSDAY("Thursday"),
+    FRIDAY("Friday"),
+    SATURDAY("Saturday"),
+    SUNDAY("Sunday");
+
+    private final String dayName;
+
+    
+    Weekdays(String dayName) {
+        this.dayName = dayName;
+    }
+
+   
+    public String getDayName() {
+        return dayName;
+    }
+}
+
+
+
+
+
+
+
+DAYS.JAVA
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package days;
+
+import java.util.Scanner;
+
+/**This class takes String input from user 
+ * and calls method  to print the 
+ * name of the day.
+ * if the input is not given in String, 
+ * program will accept and produce wrong results. 
+ * change the code to use enums which avoids String input 
+ * then print the week day names. 
+ *
+ * @author sivagamasrinivasan
+ */
+
+
+public class Days {
+    public static void main(String[] args) {
+        // Loop through all days of the week using the Weekdays enum
+        for (Weekdays day : Weekdays.values()) {
+            System.out.println(day.getDayName());
+        }
+    }
+}
+
+  //
